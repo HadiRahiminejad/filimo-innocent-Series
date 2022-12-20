@@ -138,7 +138,7 @@
     var wrapperHeaderId = document.getElementById('wrapper');
     var imgPoster = document.getElementById('img');
     var pTitle  = document.getElementById('h2');
-    var pEnTitle = document.createElement('h2');
+    var pEnTitle = document.createElement('h4');
     var spanImdb = document.createElement('p');
     var spanUserRate = document.createElement('p');
     var pAgeRate = document.createElement('p');
@@ -180,11 +180,7 @@
     pMadeIn.appendChild(pDateOfProduct);
     wrapperHeaderId.appendChild(pMadeIn);
 
-    // genre: {
-    //             first: 'خانوادگی',
-    //             second: 'درام',
-    //         },
-    //         last_episode: '1 فصل و 17قسمت',
+    // /////////////////////////////////////////////////////////////////
         var str = '';
         var footerHeader = document.getElementById('footer-header');
        
@@ -192,7 +188,6 @@
         for(var k in innocentSeries) {
             if( k == 'genre') { 
                 var obj = innocentSeries[k];
-                console.log(obj)
                 for(var kk in obj) {
                     str += '<p>' + "   " + obj[kk] + "   " +  '</p>';
                    

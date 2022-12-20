@@ -1,6 +1,7 @@
 body {
     direction: rtl;
     margin: 0;
+    height: 100%;
 }
 .header {
     display: flex;
@@ -9,6 +10,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     max-width: 900px;
+    margin-bottom: 15px;
 }
 #wrapper {
     margin-top: 90px;
@@ -25,8 +27,8 @@ body {
     align-items: center;
    padding-right: 510px;
    position: relative;
+  margin-bottom: 70px;
   
-   width: auto;
    flex-wrap: nowrap;
    
 }
@@ -38,7 +40,7 @@ body {
    left: 183px;
    bottom: 5px;
    color: #4d4d4d;
-   max-width: 900px;
+   
    
 }
 #footer-header p {
