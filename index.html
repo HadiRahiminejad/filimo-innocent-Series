@@ -12,22 +12,56 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: nowrap;
+        max-width: 900px;
     }
     #wrapper {
         margin-top: 90px;
         display: flex;
         flex-direction: column;
         justify-content: start;
-        margin-right: -180px;
+        margin-right: -390px;
        
     }
-    #foote-header {
-        display: flex;
+    #footer-header {
+        display: inline-flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
+       padding-right: 510px;
+       position: relative;
+      
+       width: auto;
+       flex-wrap: nowrap;
+       
     }
-   
+    #footer-header span::before {
+        content: '|';
+        font-size: 30px;
+        font-weight: 900;
+        position: absolute;
+       left: 183px;
+       bottom: 5px;
+       color: #4d4d4d;
+       max-width: 900px;
+       
+    }
+    #footer-header p {
+        padding: 5px 15px;
+        margin: 0 5px;
+        border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
+    background-color: #4d4d4d;
+    color: #ffffff;
+    }
+    #footer-header span {
+        padding: 5px 15px;
+        margin: 0 20px;
+        border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
+    background-color: #4d4d4d;
+    color: #ffffff;
+    }
 </style>
 <body>
     <div class="header" >
@@ -38,8 +72,6 @@
           <h2 id="h2"> سیلبیبا</h2>
 
             </div>
-        
-          
         </div>
         <div id="footer-header">
 
@@ -215,7 +247,7 @@
                 var obj = innocentSeries[k];
                 console.log(obj)
                 for(var kk in obj) {
-                    str += '<p>' + obj[kk] + " " +  '</p>';
+                    str += '<p>' + "   " + obj[kk] + "   " +  '</p>';
                    
                 }
             } 
