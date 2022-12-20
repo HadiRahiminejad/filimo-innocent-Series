@@ -83,7 +83,7 @@
             title: 'سریال بی گناه',
             en_title: 'innocent',
             imbd: '10/5.3',
-            user_rate: '594,054',
+            user_rate: '(594,054)',
             user_likes: '% 94',
             age_rate: 'مناسب برای بالای 12 سال',
             time_of_show: 'یکشنبه‌ها، ساعت 8 صبح',
@@ -186,7 +186,7 @@
                     image: 'null',
                 },
             },
-        }
+        };
        
     var headerId = document.getElementById('header');
     var wrapperHeaderId = document.getElementById('wrapper');
@@ -200,12 +200,7 @@
     var pDirector = document.createElement('p');
     var pMadeIn = document.createElement('p');
     var pDateOfProduct = document.createElement('span');
-
-
-   
-    
-   
-             
+       
     imgPoster.setAttribute('src',  innocentSeries.poster); 
     headerId.appendChild(imgPoster);
 
@@ -214,9 +209,15 @@
 
     pEnTitle.innerHTML = innocentSeries.en_title;
     wrapperHeaderId.appendChild(pEnTitle);
-    spanUserRate.innerHTML = innocentSeries.user_rate;         
+
+   
+    var userLikesSpan = document.createElement('span');
+    userLikesSpan.innerHTML = ' ' + innocentSeries.user_likes + ' ' ;
+    spanUserRate.innerHTML = innocentSeries.user_rate;
+    spanUserRate.appendChild(userLikesSpan);        
     wrapperHeaderId.appendChild(spanUserRate);
-    spanImdb.innerHTML = innocentSeries.imbd;
+
+    spanImdb.innerHTML =  innocentSeries.imbd  + ' ' + "IMBd" ;
     wrapperHeaderId.appendChild(spanImdb);
 
     pAgeRate.innerHTML = innocentSeries.age_rate;
