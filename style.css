@@ -12,13 +12,17 @@ body {
     max-width: 900px;
     margin-bottom: 15px;
 }
+#header img{
+    box-shadow: 20px 20px 20px rgba(56, 63, 80, 0.2);
+    border-radius: 10px;
+    border: 5px solid rgb(255, 217, 0);
+}
 #wrapper {
     margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-right: -390px;
-   
+    margin-right: -385px;
 }
 #footer-header {
     display: inline-flex;
@@ -27,35 +31,40 @@ body {
     align-items: center;
    padding-right: 510px;
    position: relative;
-  margin-bottom: 70px;
-  
+   margin-bottom: 70px;
    flex-wrap: nowrap;
-   
 }
 #footer-header span::before {
     content: '|';
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 500;
     position: absolute;
-   left: 183px;
-   bottom: 5px;
-   color: #4d4d4d;
-   
-   
+    left: 175px;
+    bottom: 2px;
+    color: #4d4d4d;
 }
 #footer-header p {
     padding: 5px 15px;
     margin: 0 5px;
     border-radius: 30px;
-box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
-background-color: #4d4d4d;
-color: #ffffff;
+    box-shadow: 3px 3px 3px rgba(43, 55, 87, 0.961);
+    background-color: #4d4d4d;
+    color: #ffffff;
 }
 #footer-header span {
     padding: 5px 15px;
     margin: 0 20px;
     border-radius: 30px;
-box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
-background-color: #4d4d4d;
-color: #ffffff;
+    box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
+    background-color: #4d4d4d;
+    color: #ffffff;
+}
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 500px;
+    margin: 15px 400px 0 0;
 }
