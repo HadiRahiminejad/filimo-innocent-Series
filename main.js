@@ -106,55 +106,82 @@ var innocentSeries = {
             image: 'null',
         },
     },
-};
-
-var headerId = document.getElementById('banner-header');
+}
 var wrapperHeaderId = document.getElementById('wrapper');
-var imgPoster = document.getElementById('img');
+var headerId = document.getElementById('banner-left');
+
+var imgPoster = document.getElementById('poster');
 var pTitle  = document.getElementById('h2');
 var pEnTitle = document.createElement('h4');
 var spanImdb = document.createElement('p');
+var imgLikeIcon = document.createElement('img');
+imgLikeIcon.setAttribute('src','images/like-svgrepo-com.svg');
+imgLikeIcon.setAttribute('class', 'banner-like-icon');
+var bannerImdbUserRate = document.createElement('div');
+bannerImdbUserRate.setAttribute('class', 'banner-imdb-userRate');
+
 var spanUserRate = document.createElement('p');
 var pAgeRate = document.createElement('p');
+pAgeRate.setAttribute('class', 'banner-age-rate');
+var imgAgeRate = document.createElement('img');
+imgAgeRate.setAttribute('src', 'images/12-plus-svgrepo-com.svg')
+imgAgeRate.setAttribute('class', 'banner-age-rate-icon');
 var pTimeOfShow = document.createElement('p');
+pTimeOfShow.setAttribute('class', 'banner-time-of-show');
+var imgTimeOfShow = document.createElement('img');
+imgTimeOfShow.setAttribute('src','images/date-outline-badged-svgrepo-com.svg')
+imgTimeOfShow.setAttribute('class', 'banner-time-of-show-icon');
 var pDirector = document.createElement('p');
 var pMadeIn = document.createElement('p');
 var pDateOfProduct = document.createElement('span');
 var aboutDiv = document.getElementById('about');
-imgPoster.setAttribute('src',  innocentSeries.poster); 
-headerId.appendChild(imgPoster);
+// console.log(innocentSeries.poster)
+imgPoster.setAttribute('src', innocentSeries.poster); 
+wrapperHeaderId.appendChild(imgPoster);
 
 pTitle.innerHTML = innocentSeries.title;
-wrapperHeaderId.appendChild(pTitle);
+headerId.appendChild(pTitle);
 
 pEnTitle.innerHTML = innocentSeries.en_title;
-wrapperHeaderId.appendChild(pEnTitle);
+headerId.appendChild(pEnTitle);
 
 
 var userLikesSpan = document.createElement('span');
 userLikesSpan.innerHTML = ' ' + innocentSeries.user_likes + ' ' ;
+
 spanUserRate.innerHTML = innocentSeries.user_rate;
-spanUserRate.appendChild(userLikesSpan);        
-wrapperHeaderId.appendChild(spanUserRate);
+var imgImdbIcon = document.createElement('img');
+imgImdbIcon.setAttribute('src','images/imdb.svg');
+imgImdbIcon.setAttribute('class', 'banner-imdb-icon');
 
-spanImdb.innerHTML =  innocentSeries.imbd  + ' ' + "IMBd" ;
-wrapperHeaderId.appendChild(spanImdb);
+spanUserRate.appendChild(userLikesSpan);   
+spanUserRate.appendChild(imgLikeIcon);
 
+bannerImdbUserRate.appendChild(spanUserRate);
+
+spanImdb.innerHTML =  innocentSeries.imbd;
+spanImdb.appendChild(imgImdbIcon)
+bannerImdbUserRate.appendChild(spanImdb);
+
+headerId.appendChild(bannerImdbUserRate);
 pAgeRate.innerHTML = innocentSeries.age_rate;
-wrapperHeaderId.appendChild(pAgeRate);
+pAgeRate.appendChild(imgAgeRate);
+
+headerId.appendChild(pAgeRate);
 
 pTimeOfShow.innerHTML = innocentSeries.time_of_show;
-wrapperHeaderId.appendChild(pTimeOfShow);
+pTimeOfShow.appendChild(imgTimeOfShow);
+headerId.appendChild(pTimeOfShow);
 
 pDirector.innerHTML = 'کارگردان: ' + innocentSeries.director;
-wrapperHeaderId.appendChild(pDirector);
+headerId.appendChild(pDirector);
 
 pMadeIn.innerHTML = innocentSeries.made_in;
 pDateOfProduct.innerHTML = innocentSeries.date_of_product;
 pMadeIn.appendChild(pDateOfProduct);
-wrapperHeaderId.appendChild(pMadeIn);
+headerId.appendChild(pMadeIn);
 
-// /////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////////
 var str = '';
 var footerHeader = document.getElementById('footer-header');
 
@@ -163,11 +190,9 @@ for(var k in innocentSeries) {
     if( k == 'genre') { 
         var obj = innocentSeries[k];
         for(var kk in obj) {
-            str += '<p>' + "   " + obj[kk] + "   " +  '</p>';
-           
+            str += '<p>' + "   " + obj[kk] + "   " +  '</p>';  
         }
     } 
-    
 }
 footerHeader.innerHTML = str;
 
@@ -210,8 +235,7 @@ for(var k in innocentSeries) {
             }
             if(kk == 'text') {
                 storyAboutTxt.innerHTML = obj[kk];
-            }
-           
+            }  
       }
    } 
 }
@@ -219,5 +243,3 @@ aboutDiv.appendChild(storyTitle);
 aboutDiv.appendChild(stroyTxt);
 storyAboutDiv.appendChild(storyAboutTitle);
 storyAboutDiv.appendChild(storyAboutTxt);
-
-fun();

@@ -1,70 +1,620 @@
+
 body {
     direction: rtl;
     margin: 0;
+   /* position: relative; */
+   width: 100%;
+   font-family: Vazirmatn;
+   font-family: Vazirmatn FD;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* ////////////////////////////////////////////////////////////////// */
+#header {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+.header-wrapper {
+    margin: 0 auto;
+    padding: 0px 25px;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-wrapper {
+    display: flex;
+     gap: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+   text-align: center;
+}
+.right-wrapper a  {
+    color: #fff;
+}
+.right-wrapper a:hover  {
+    color: #f9ad03;
+}
+.header-fire-icon {
+    width: 18px;
+    height: 18px;
+}
+.header-logo {
+    width: 112px;
+    height: 25.5px;
+    padding-left: 31px;
+    border-left: 1px solid rgba(255,255,255,.3);
+}
+.header-school {
+    border-radius: 50px;
+    padding: 2px 30px 2px 0;
+    background: rgba(245,184,63,.25);
+    color: #f5b83f;
+    position: relative;
+}
+.header-school span {
+    color: #f5b83f;
+}
+.left-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+.left-wrapper li {
+text-align: center;
+padding: 0 10px;
+}
+.left-wrapper span{
+    color: #fff;
+}
+ .header-school img.header-school-icon {
+    width: 20px;
+    height: 18px; 
+    top: 10px;
+    right: 4px;
+    position: absolute; 
+}
+span.header-school-off {
+    background: #fff;
+    color: #000;
+    font-size: 8px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    padding: 5px 5px;
+}
+.header-search .header-search-icon {
+    width: 18px;
+    height: 18px; 
+}
+.header-buy {
+    background-color: #1cb561;
+    color: #fff;
+    fill: #fff;
+    padding: 10px 46px;
+    border-radius: 4px;
+    position: relative;
+}
+.header-buy-icon {
+    width:  24px;
+    height: 23px;
+    position: absolute;
+    top: 14px;
+    right: 17px;
+}
+.header-sing-up {
+    background-color: rgba(255,255,255,.2);
+    color: #fff;
+    fill: #fff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+.bc-gr-cover {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+   object-fit: cover;
+   object-position: left;
     height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 .banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
-    max-width: 900px;
-    margin-bottom: 15px;
+   position: relative;
+     top: 0; 
+    right: 0;
+    left: 0; 
+   bottom: 0;
+     height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
 }
-#banner-header img{
-    box-shadow: 20px 20px 20px rgba(56, 63, 80, 0.2);
-    border-radius: 10px;
-    border: 5px solid rgb(255, 217, 0);
-}
-#wrapper {
-    margin-top: 90px;
+#banner-left {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    margin-right: -385px;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: 400;
+    color: #fff;
+}
+#banner-left h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+#wrapper #poster{
+    border-radius: 10px;
+    border: 5px solid rgb(255, 217, 0) ;
+    width: 253px;
+    height: 334px;
+    margin: 0 79px 0 30px;
+}
+#wrapper {
+    display: flex;
+     flex-direction: row-reverse;
+     justify-content: space-evenly;
+    padding-top: 50px;
+    padding-right: 20px;
+    z-index: 2;
+    max-width:max-content;
+}
+.banner-imdb-userRate {
+    display: flex;
+    row-gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 16px;
+    font-family: Vazirmatn FD;
+}
+div.banner-imdb-userRate p:first-child{
+    border-radius: 50px;
+    background: #1cb561;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+} 
+.banner-like-icon{
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    margin:0 10px 0 5px;
+}
+div.banner-imdb-userRate p:last-child{
+    border-radius: 50px;
+    background-color: #f6b828;
+    color: #000;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+} 
+.banner-imdb-icon{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    margin:0 10px 0 5px;
+}
+.banner-age-rate {
+    display: flex;
+    gap: 15px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    color:  #fdc13c;
+    font-weight: 700;
+}
+p.banner-time-of-show {
+    padding: 4px 8px;
+    background: rgba(10,10,10,.9);
+    color: #ffff;
+    font-weight: 700;
+    display: flex;
+    gap: 15px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.banner-time-of-show-icon {
+    width: 20px;
+    height: 20px;
+}
+#banner-left h4 {
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+#banner-left p {
+    margin-top: 2px;
+    margin-left: 5px;
 }
 #footer-header {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-   padding-right: 510px;
    position: relative;
-   margin-bottom: 70px;
    flex-wrap: nowrap;
+   padding-right: 366px;
+   padding-bottom: 50px;
+   padding-top: 55px;
 }
 #footer-header span::before {
-    content: '|';
-    font-size: 30px;
-    font-weight: 500;
+    content: '';
     position: absolute;
-    left: 175px;
-    bottom: 2px;
-    color: #4d4d4d;
+    right: 551px;
+    bottom: 50px;
+    height: 38px;
+    border-left: 2px solid #4d4d4dc4;
 }
 #footer-header p {
     padding: 5px 15px;
     margin: 0 5px;
-    border-radius: 30px;
-    box-shadow: 3px 3px 3px rgba(43, 55, 87, 0.961);
+    border-radius: 50px;
     background-color: #4d4d4d;
     color: #ffffff;
 }
 #footer-header span {
     padding: 5px 15px;
     margin: 0 20px;
-    border-radius: 30px;
-    box-shadow: 3px 3px 3px rgba(43, 66, 123, 0.2);
+    border-radius: 50px;
     background-color: #4d4d4d;
     color: #ffffff;
 }
+.details_actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 2px solid #4d4d4dc4;
+    padding: 24px 0;
+}
+.details_actions-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.details_actions-left {
+    display: flex;
+    flex-direction: row;
+}
+.banner-folow {
+    background-color: rgba(255,255,255,.2);
+    border-radius: 24px;
+    padding: 7px 23px;
+    color: #ffffff;
+    margin-left: 10px;
+    text-align: center;
+}
+.banner-plus-circle {
+    width: 22px;
+    height: 22px;
+   /* padding: 3px; */
+
+}
+.banner-like-dislike {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 100px;
+    padding: 9px;
+    margin-left: 5px;
+}
+.banner-like-dislike-icon {
+    width: 20px;
+    height: 20px;
+}
+.banner-login-to-watch {
+    background-color: #1cb561;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+.banner-login-to-watch-icon {
+    width: 20px;
+    height: 20px;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
 .about-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    max-width: 500px;
-    margin: 15px 400px 0 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+     flex-wrap: wrap;
+   padding-top: 50px;
+    gap: 50px;
+    background-color: #151515;
 }
+
+.about-video {
+    max-width: 570px;
+    max-height: 325px;
+    background: rgba(0,0,0,.2);
+}
+.about-story-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+#about-story h3 , #about h3 {
+    color: #fff;
+    padding-top: 0;
+    margin-top: 0;
+}
+#about p{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    color: #b3b3b3;
+    line-height: 2;
+}
+#about-story p{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    color: #b3b3b3;
+    line-height: 2;
+}
+@media only screen and (max-width: 1000px ) {
+    
+    .header-wrapper {
+        margin: 10px auto;
+        font-size: 10px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+       font-weight: 500;
+    }
+    #banner-left {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        color: #fff;
+        font-size: 16px;
+    }
+    #footer-header {
+       padding-right: 350px;
+       padding-bottom: 50px;
+       padding-top: 55px;
+    }
+    #footer-header span::before {
+        content: '';
+        position: absolute;
+        right: 523px;
+        bottom: 50px;
+        height: 32px;
+        border-left: 1px solid #4d4d4dc4;
+    }
+    #wrapper {
+        display: flex;
+         flex-direction: row-reverse;
+         justify-content: center;
+        padding-top: 100px;
+        margin-right: 0px;
+        z-index: 2;
+        padding-right: 0px;
+    }
+    .banner {
+        position: relative;
+          top: 0; 
+         right: 0;
+         left: 0; 
+        bottom: 0;
+          height: 100%;
+         width: 100%;
+         margin-top: 30px;
+         /* padding: 30px; */
+         background: rgba(0, 0, 0, 0.6);
+     }
+     .bc-gr-cover {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+       object-fit: cover;
+       object-position: left;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+}
+}
+@media screen and ( 600 <= width <= 880px) {
+    .header-wrapper {
+       font-size: 8px;
+       font-weight: 200;
+    }
+    #wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        /* flex-direction: column-reverse; */
+        padding-top: 100px;
+        padding-right: 0;
+        align-items: center;
+        
+       width: 600px;
+       padding-left: 0px;
+        z-index: 2; 
+    }
+    #wrapper img{
+        border-radius: 10px;
+        border: 5px solid rgb(255, 217, 0) ;
+        width: 252px;
+        height: 309px;
+     margin: 0px 30px 10px;
+    }
+}
+
+/* Generated by script */
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+/* Generated by script */
+@font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: Vazirmatn;
+    src: url('webfonts/Vazirmatn-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
