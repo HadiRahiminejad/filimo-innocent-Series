@@ -434,6 +434,38 @@ span.actor-names {
     color: #ffffff;
     font-size: 16px;
 }
+.crew-item {
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    vertical-align: top;
+    color: #828282;
+  
+}
+.crew-names .crew-name {
+    color: #fff;
+    font-weight: bold;
+}
+.section-crew {
+    /* background: #151515; */
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    padding-top: 32px;
+    margin-bottom: 60px;
+}
+.inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+     max-width: 1200px;
+}
 @media only screen and (max-width: 1000px ) {
     
     .header-wrapper {
