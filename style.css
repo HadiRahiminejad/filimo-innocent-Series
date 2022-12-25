@@ -6,6 +6,7 @@ body {
    width: 100%;
    font-family: Vazirmatn;
    font-family: Vazirmatn FD;
+   background: #151515;
 }
 *, *::after, *::before {
     box-sizing: border-box;
@@ -378,6 +379,56 @@ p.banner-time-of-show {
     max-width: 600px;
     color: #b3b3b3;
     line-height: 2;
+}
+.actor-names-images {
+    background: #151515;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+   flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    padding-top: 32px;
+    margin-bottom: 60px;
+   
+}
+.single-section-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+    color: #fff;
+   
+}
+.single-section-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+    max-width: 1200px;
+}
+.crew-title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: rpw;
+    padding: 2px 2px 2px 10px;
+    background-color: rgba(255,255,255,.05);
+  width: 177.5px;
+  height: 44px;
+    border-radius: 50px;
+}
+.actor-avatar {
+    
+    border-radius: 40px;
+    width: 40px;
+    padding: 3px;
+    border-radius: 100px;
+    background: #a1a1a1;
+}
+span.actor-names {
+    color: #ffffff;
+    font-size: 16px;
 }
 @media only screen and (max-width: 1000px ) {
     
