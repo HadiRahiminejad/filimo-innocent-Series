@@ -366,21 +366,30 @@ p.banner-time-of-show {
     justify-content: center;
    
 }
-#about-story h3 , #about h3 {
+#about-story h3 {
+    color: #fff;
+    padding-top: 0;
+    margin-top: 0;
+}
+#about {
+    margin-left: 60px;
+}
+#about h3 {
     color: #fff;
     padding-top: 0;
     margin-top: 0;
 }
 #about p{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    max-width: 600px;
+    align-items: flex-start; */
     color: #b3b3b3;
     line-height: 2;
 }
 #about-story p{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    */
     max-width: 600px;
     color: #b3b3b3;
     line-height: 2;
