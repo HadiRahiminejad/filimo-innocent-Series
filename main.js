@@ -15,14 +15,6 @@ var innocentSeries = {
         second: 'درام ',
     },
     last_episode: 'فصل 1 قسمت 17',
-    story: {
-        title: 'داستان سریال بی گناه',
-        text: 'بهمن مردانی بعد از ۲۵ سال برای پیدا کردن عشق گمشده اش به تهران باز میگردد.',
-    },
-    about_series: {
-        title: 'درباره سریال بی گناه',
-        text: 'سریال بی گناه به کارگردانی مهران احمدی در سال 1400 ساخته شده است. این سریال محصول کشور ایران و در ژانر خانوادگی و درام می‌باشد. در این سریال محسن کیایی، ویشکا آسایش، شبنم مقدمی، مهران احمدی، ماهور الوند، آتیلا پسیانی، نسرین نصرتی، حسین پورکریمی، هدیه بازوند، نوید لایقی مقدم، منوچهر زنده دل، دنیا مدنی، مبینا طبایی، مهران وثوقی، مسعود رایگان، مهرانه مهین ترابی، رویا تیموریان، باران احمدی، احسان معجونی و یگانه رادبخش به هنرمندی پرداخته‌اند.',
-    },
 }
 var wrapperHeaderId = document.getElementById('wrapper');
 var headerId = document.getElementById('banner-left');
@@ -51,8 +43,7 @@ imgTimeOfShow.setAttribute('class', 'banner-time-of-show-icon');
 var pDirector = document.createElement('p');
 var pMadeIn = document.createElement('p');
 var pDateOfProduct = document.createElement('span');
-var aboutDiv = document.getElementById('about');
-// console.log(innocentSeries.poster)
+
 imgPoster.setAttribute('src', innocentSeries.poster); 
 wrapperHeaderId.appendChild(imgPoster);
 
@@ -101,8 +92,6 @@ headerId.appendChild(pMadeIn);
 // ////////////////////////////////////////////////////////////////////////////////////////
 var str = '';
 var footerHeader = document.getElementById('footer-header');
-
-
 for(var k in innocentSeries) {
     if( k == 'genre') { 
         var obj = innocentSeries[k];
@@ -112,51 +101,18 @@ for(var k in innocentSeries) {
     } 
 }
 footerHeader.innerHTML = str;
-
 var lastEpisode = document.createElement('span');
 lastEpisode.innerHTML = innocentSeries.last_episode;
 footerHeader.appendChild(lastEpisode);
-// story: {
-//         title: 'داستان سریال بی گناه',
-//         text: 'بهمن مردانی بعد از ۲۵ سال برای پیدا کردن عشق گمشده اش به تهران باز میگردد.',
-//     },
-//     about_series: {
-//         title: 'درباره سریال بی گناه',
-//         text: 'سریال بی گناه به کارگردانی مهران احمدی در سال 1400 ساخته شده است. این سریال محصول کشور ایران و در ژانر خانوادگی و درام می‌باشد. در این سریال محسن کیایی، ویشکا آسایش، شبنم مقدمی، مهران احمدی، ماهور الوند، آتیلا پسیانی، نسرین نصرتی، حسین پورکریمی، هدیه بازوند، نوید لایقی مقدم، منوچهر زنده دل، دنیا مدنی، مبینا طبایی، مهران وثوقی، مسعود رایگان، مهرانه مهین ترابی، رویا تیموریان، باران احمدی، احسان معجونی و یگانه رادبخش به هنرمندی پرداخته‌اند.',
-//     },
 
-var aboutDiv = document.getElementById('about');
-var storyAboutDiv = document.getElementById('about-story')
-var storyTitle = document.createElement('h3');
-var stroyTxt = document.createElement('p');
-var storyAboutTitle = document.createElement('h3');
-var storyAboutTxt = document.createElement('p');
-// var html = '';
-for(var k in innocentSeries) {
-    if(k == 'story') {
-        var obj = innocentSeries[k];
-        for(var kk in obj) {
-            if(kk == 'title') {
-                storyTitle.innerHTML = obj[kk];
-            }
-            if(kk == 'text') {
-                stroyTxt.innerHTML = obj[kk];
-            }
-        }
-}
-    if(k == 'about_series') {
-        var obj = innocentSeries[k];
-        for(var kk in obj) {
-            if(kk == 'title') {
-                storyAboutTitle.innerHTML = obj[kk];
-            }
-            if(kk == 'text') {
-                storyAboutTxt.innerHTML = obj[kk];
-            }  
-      }
-   } 
-}
-aboutDiv.appendChild(storyTitle);
-aboutDiv.appendChild(stroyTxt);
-storyAboutDiv.appendChild(storyAboutTitle);
-storyAboutDiv.appendChild(storyAboutTxt);
+var descriotionShowMore = document.querySelector('.description-show-more');
+function showMoreDescription(cls) {
+    cls.style.display = 'none';
+    }
+
+descriotionShowMore.addEventListener('click', () => {
+    showMoreDescription(descriotionShowMore);
+}); 
+
+
+
